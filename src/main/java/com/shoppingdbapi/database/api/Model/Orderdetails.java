@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class orderdetails {
+public class Orderdetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
@@ -19,5 +19,5 @@ public class orderdetails {
     double totalPrice;
     boolean isDelivered;
     @ManyToOne
-    portalUser user;
+    PortalUser user;
 }

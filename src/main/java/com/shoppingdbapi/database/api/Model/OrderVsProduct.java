@@ -1,6 +1,5 @@
 package com.shoppingdbapi.database.api.Model;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
 
@@ -12,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class orderVspriduct {
+public class OrderVsProduct {
     UUID orderId;
     UUID productID;
 }

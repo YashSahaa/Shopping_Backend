@@ -14,7 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class portalUser {
+public class PortalUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;

@@ -11,12 +11,12 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class cart {
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     int quantity;
     int totalPrice;
     @OneToOne
-    portalUser user;
+    PortalUser user;
 }

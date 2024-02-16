@@ -12,13 +12,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class product {
+public class Product {
     @Id
     UUID id;
     String productName;
     int price;
     int qunatity;
-    portalUser seller;
+    PortalUser seller;
     double rating;
     String productType;
 
