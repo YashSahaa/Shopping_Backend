@@ -1,10 +1,10 @@
-package com.shoppingdbapi.database.api;
+package com.shopping_backendUser.userApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DatabaseApiApplicationTests {
+class UserApiApplicationTests {
 
 	@Test
 	void contextLoads() {
