@@ -21,18 +21,18 @@ public class ProductController {
     @Autowired
     PortalUserRepo portalUserRepo;
     @PostMapping("/add")
-    public Product addProduct(@RequestBody ProductReqBody productRb) {
+    public ProductReqBody addProduct(@RequestBody ProductReqBody productRb) {
         UUID id = UUID.randomUUID();
         Product product = new Product();
         product.setId(id);
         product.setProductName(productRb.getProductName());
-        product.setQunatity(productRb.getQunatity());
+        product.setQunatity(productRb.getQuantity());
         product.setPrice(productRb.getPrice());
         product.setRating(0.0);
         product.setProductType(productRb.getProductType());
         PortalUser seller = portalUserRepo.findById(productRb.getSellerId()).orElse(null);
         product.setSeller(seller);
         productRepo.save(product);
-        return product;
+        return productRb;
     }
 }

@@ -11,7 +11,7 @@ import java.util.UUID;
 public class ProductReqBody {
     String productName;
     int price;
-    int qunatity;
+    int quantity;
     UUID sellerId;
     String productType;
 
