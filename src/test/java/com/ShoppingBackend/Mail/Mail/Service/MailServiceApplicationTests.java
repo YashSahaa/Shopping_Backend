@@ -1,10 +1,10 @@
-package com.shoppingdbapi.database.api;
+package com.ShoppingBackend.Mail.Mail.Service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DatabaseApiApplicationTests {
+class MailServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
