@@ -9,6 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class GeneralMessegeDTO {
+public class GeneralMessageDTO {
     String message;
 }
