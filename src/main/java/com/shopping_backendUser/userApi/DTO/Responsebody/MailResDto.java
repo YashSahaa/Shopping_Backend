@@ -1,4 +1,4 @@
-package com.shopping_backendUser.userApi.DTO.GeneruserDTO.ResponseDTO;
+package com.shopping_backendUser.userApi.DTO.Responsebody;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

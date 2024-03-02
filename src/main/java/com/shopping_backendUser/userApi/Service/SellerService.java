@@ -1,6 +1,6 @@
 package com.shopping_backendUser.userApi.Service;
 
-import com.shopping_backendUser.userApi.DTO.GeneruserDTO.ResponseDTO.MailResDto;
+import com.shopping_backendUser.userApi.DTO.Responsebody.MailResDto;
 import com.shopping_backendUser.userApi.DTO.GeneruserDTO.UserDTO;
 import com.shopping_backendUser.userApi.DTO.Requestbody.AddProductMailres;
 import com.shopping_backendUser.userApi.DTO.Requestbody.SellerProductRegistrationDTO;
@@ -36,11 +36,11 @@ public class SellerService {
         ShoppingLogger.logger.info("calling db api,product");
         String urlp = "http://localhost:8081/db/product/add";
         HttpEntity httpEntitypP = new HttpEntity(sellerProductRegistrationDTO,httpHeaders);
-        ResponseEntity<SellerProductRegistrationDTO>  resP = restTemplate.exchange(urlp,HttpMethod.POST,httpEntitypP, SellerProductRegistrationDTO.class);
+        ResponseEntity<SellerProductRegistrationDTO> resP = restTemplate.exchange(urlp,HttpMethod.POST,httpEntitypP, SellerProductRegistrationDTO.class);
         if(resP.getBody()==null) throw new RuntimeException(String.format("Product not added !!"));
 
         ShoppingLogger.logger.info("Calling mail api ,add product");
-        String mailurl = ApiUrlUtil.mailurl+"/seller/addProduct";
+        String mailurl = ApiUrlUtil.mailUrl +"/seller/addProduct";
         String mail = generateMailForAddProduct(userRes.getBody().getName(),sellerProductRegistrationDTO.getProductName(),sellerProductRegistrationDTO.getPrice(),sellerProductRegistrationDTO.getQuantity(),sellerProductRegistrationDTO.getProductType());
         AddProductMailres addProductMailres = new AddProductMailres(userRes.getBody().getEmail(),mail,"Congratulations !! Product got added",userRes.getBody().getName());
         HttpEntity mailentity = new HttpEntity(addProductMailres,httpHeaders);
