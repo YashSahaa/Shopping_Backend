@@ -12,6 +12,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class SellerProductRegistrationDTO {
+    UUID productid;
     String productName;
     int price;
     int quantity;
