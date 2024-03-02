@@ -17,7 +17,7 @@ public class Product {
     UUID id;
     String productName;
     int price;
-    int qunatity;
+    int quantity;
     PortalUser seller;
     double rating;
     String productType;

@@ -9,6 +9,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class ProductReqBody {
+    UUID productid;
     String productName;
     int price;
     int quantity;
